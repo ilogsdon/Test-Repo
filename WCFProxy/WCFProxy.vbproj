@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F10D3C97-605C-42B9-B913-9227CB7780F4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WCFProxy</RootNamespace>
+    <AssemblyName>WCFProxy</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WCFProxy.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WCFProxy.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\SharedAssemblyInfo.cs">
+      <Link>SharedAssemblyInfo.cs</Link>
+    </Content>
+    <Content Include="cancelpolicy.aspx" />
+    <Content Include="createaddress.aspx" />
+    <Content Include="createcashreceipt.aspx" />
+    <Content Include="createclient.aspx" />
+    <Content Include="createentity.aspx" />
+    <Content Include="createinvoice.aspx" />
+    <Content Include="createinvoicefortam.aspx" />
+    <Content Include="createnamedinsured.aspx" />
+    <Content Include="createpolicy.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="info.aspx" />
+    <Content Include="renewpolicy.aspx" />
+    <Content Include="retrieveaddress.aspx" />
+    <Content Include="retrieveclient.aspx" />
+    <Content Include="retrieveentity.aspx" />
+    <Content Include="retrieveinvoice.aspx" />
+    <Content Include="retrievenamedinsured.aspx" />
+    <Content Include="retrievepolicy.aspx" />
+    <Content Include="searchclient.aspx" />
+    <Content Include="searchinvoice.aspx" />
+    <Content Include="searchpolicy.aspx" />
+    <Content Include="updateaddress.aspx" />
+    <Content Include="updateclient.aspx" />
+    <Content Include="updateentity.aspx" />
+    <Content Include="updateinvoice.aspx" />
+    <Content Include="updatenamedinsured.aspx" />
+    <Content Include="updatepolicy.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="wsproxyscripts\CashReceiptNamespaces.txt" />
+    <Content Include="wsproxyscripts\console.xml" />
+    <Content Include="wsproxyscripts\ConsoleHook.dll" />
+    <Content Include="wsproxyscripts\CustomerNamespaces.txt" />
+    <Content Include="wsproxyscripts\EntityNamespaces.txt" />
+    <Content Include="wsproxyscripts\FreeImage.dll" />
+    <Content Include="wsproxyscripts\FreeImagePlus.dll" />
+    <Content Include="wsproxyscripts\InvoiceNamespaces.txt" />
+    <Content Include="wsproxyscripts\make.exe" />
+    <Content Include="wsproxyscripts\PolicyNamespaces.txt" />
+    <Content Include="wsproxyscripts\sfk.exe" />
+    <Content Include="XML\cancelpolicy.xml" />
+    <Content Include="XML\createaddress.xml" />
+    <Content Include="XML\createcashreceipt.xml" />
+    <Content Include="XML\createclient.xml" />
+    <Content Include="XML\createentity.xml" />
+    <Content Include="XML\createinvoice.xml" />
+    <Content Include="XML\createinvoicefortam.xml" />
+    <Content Include="XML\createnamedinsured.xml" />
+    <Content Include="XML\createpolicy.xml" />
+    <Content Include="XML\renewpolicy.xml" />
+    <Content Include="XML\retrieveaddress.xml" />
+    <Content Include="XML\retrieveclient.xml" />
+    <Content Include="XML\retrieveentity.XML" />
+    <Content Include="XML\retrieveinvoice.XML" />
+    <Content Include="XML\retrievenamedinsured.XML" />
+    <Content Include="XML\retrievepolicy.XML" />
+    <Content Include="XML\searchclient.xml" />
+    <Content Include="XML\searchinvoice.XML" />
+    <Content Include="XML\searchpolicy.XML" />
+    <Content Include="XML\updateaddress.xml" />
+    <Content Include="XML\updateclient.xml" />
+    <Content Include="XML\updateentity.xml" />
+    <Content Include="XML\updateinvoice.xml" />
+    <Content Include="XML\updatenamedinsured.xml" />
+    <Content Include="XML\updatepolicy.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cancelpolicy.aspx.designer.vb">
+      <DependentUpon>cancelpolicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cancelpolicy.aspx.vb">
+      <DependentUpon>cancelpolicy.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CashReceiptManagementService.vb" />
+    <Compile Include="createaddress.aspx.designer.vb">
+      <DependentUpon>createaddress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="createaddress.aspx.vb">
+      <DependentUpon>createaddress.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="createcashreceipt.aspx.designer.vb">
+      <DependentUpon>createcashreceipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="createcashreceipt.aspx.vb">
+      <DependentUpon>createcashreceipt.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="createclient.aspx.designer.vb">
+      <DependentUpon>createclient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="createclient.aspx.vb">
+      <DependentUpon>createclient.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="createentity.aspx.designer.vb">
+      <DependentUpon>createentity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="createentity.aspx.vb">
+      <DependentUpon>createentity.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="createinvoice.aspx.designer.vb">
+      <DependentUpon>createinvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="createinvoice.aspx.vb">
+      <DependentUpon>createinvoice.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="createinvoicefortam.aspx.designer.vb">
+      <DependentUpon>createinvoicefortam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="createinvoicefortam.aspx.vb">
+      <DependentUpon>createinvoicefortam.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="createnamedinsured.aspx.designer.vb">
+      <DependentUpon>createnamedinsured.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="createnamedinsured.aspx.vb">
+      <DependentUpon>createnamedinsured.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="createpolicy.aspx.designer.vb">
+      <DependentUpon>createpolicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="createpolicy.aspx.vb">
+      <DependentUpon>createpolicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerManagementService.vb" />
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EntityManagementService.vb" />
+    <Compile Include="info.aspx.designer.vb">
+      <DependentUpon>info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="info.aspx.vb">
+      <DependentUpon>info.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InvoiceManagementService.vb" />
+    <Compile Include="PolicyManagementService.vb" />
+    <Compile Include="renewpolicy.aspx.designer.vb">
+      <DependentUpon>renewpolicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="renewpolicy.aspx.vb">
+      <DependentUpon>renewpolicy.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="retrieveaddress.aspx.designer.vb">
+      <DependentUpon>retrieveaddress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="retrieveaddress.aspx.vb">
+      <DependentUpon>retrieveaddress.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="retrieveclient.aspx.designer.vb">
+      <DependentUpon>retrieveclient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="retrieveclient.aspx.vb">
+      <DependentUpon>retrieveclient.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="retrieveentity.aspx.vb">
+      <DependentUpon>retrieveentity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="retrieveentity.aspx.designer.vb">
+      <DependentUpon>retrieveentity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="retrieveinvoice.aspx.designer.vb">
+      <DependentUpon>retrieveinvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="retrieveinvoice.aspx.vb">
+      <DependentUpon>retrieveinvoice.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="retrievenamedinsured.aspx.designer.vb">
+      <DependentUpon>retrievenamedinsured.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="retrievenamedinsured.aspx.vb">
+      <DependentUpon>retrievenamedinsured.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="retrievepolicy.aspx.designer.vb">
+      <DependentUpon>retrievepolicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="retrievepolicy.aspx.vb">
+      <DependentUpon>retrievepolicy.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="searchclient.aspx.designer.vb">
+      <DependentUpon>searchclient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="searchclient.aspx.vb">
+      <DependentUpon>searchclient.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="searchinvoice.aspx.designer.vb">
+      <DependentUpon>searchinvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="searchinvoice.aspx.vb">
+      <DependentUpon>searchinvoice.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="searchpolicy.aspx.designer.vb">
+      <DependentUpon>searchpolicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="searchpolicy.aspx.vb">
+      <DependentUpon>searchpolicy.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="updateaddress.aspx.designer.vb">
+      <DependentUpon>updateaddress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="updateaddress.aspx.vb">
+      <DependentUpon>updateaddress.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="updateclient.aspx.designer.vb">
+      <DependentUpon>updateclient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="updateclient.aspx.vb">
+      <DependentUpon>updateclient.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="updateentity.aspx.designer.vb">
+      <DependentUpon>updateentity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="updateentity.aspx.vb">
+      <DependentUpon>updateentity.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="updateinvoice.aspx.designer.vb">
+      <DependentUpon>updateinvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="updateinvoice.aspx.vb">
+      <DependentUpon>updateinvoice.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="updatenamedinsured.aspx.designer.vb">
+      <DependentUpon>updatenamedinsured.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="updatenamedinsured.aspx.vb">
+      <DependentUpon>updatenamedinsured.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="updatepolicy.aspx.designer.vb">
+      <DependentUpon>updatepolicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="updatepolicy.aspx.vb">
+      <DependentUpon>updatepolicy.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="wsproxyscripts\console.chm" />
+    <None Include="wsproxyscripts\make.bat" />
+    <None Include="wsproxyscripts\tutorial léeme.rtf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aon.Ars.ServiceModel.Federation\Aon.Ars.ServiceModel.Federation.Utilities\Aon.Ars.ServiceModel.Federation.Utilities.csproj">
+      <Project>{D84BB644-64CC-43C1-8012-C0846063A83E}</Project>
+      <Name>Aon.Ars.ServiceModel.Federation.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3459</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
